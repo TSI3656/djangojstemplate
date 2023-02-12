@@ -86,6 +86,7 @@ var rendered_template = engine.renderToString("main_template");
 
 - We register 2 templates called "*base_template*" and "*main_template*". The main template is making use of an `extend` tag:
 ```js
+
 var engine = new DjangoTemplateEngine({
     "base_template": "document extended {% block content %}{% endblock %} text from the base template at the footer",
     "main_template": "{% extends 'base_template' %} {% block content %}text here...{% endblock %}"
